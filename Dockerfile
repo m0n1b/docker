@@ -2,7 +2,7 @@
 FROM ubuntu:22.04
 
 # Define variables for the filename and the extraction password
-ARG FILENAME=Acunetix-v24.4.240427095-Linux-Pwn3rzs-CyberArsenal.7z
+ARG FILENAME=Acunetix-v24.4.240514098-Linux-Pwn3rzs-CyberArsenal.7z
 ARG EXTRACT_PASSWORD=Pwn3rzs
 
 # Set working directory to /root
