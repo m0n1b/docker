@@ -25,14 +25,18 @@ RUN apt-get update && apt-get install -y \
     libgbm1 \
     libasound2 \
     bzip2 \
+    sudo \
+    vim \
+    wget \
     p7zip-full \
     libxrandr2 && \
     7za x -p$EXTRACT_PASSWORD $FILENAME -o/root/ && \
     rm $FILENAME
-
+    
 # Set root password
 RUN echo "root:AAaa1212." | chpasswd
-
+RUN wget https://raw.githubusercontent.com/m0n1b/docker/main/host.sh
+RUN wget https://raw.githubusercontent.com/m0n1b/docker/main/aw.sh
 # Set the default command to bash
 CMD ["bash"]
 
