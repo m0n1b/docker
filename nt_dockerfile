@@ -1,0 +1,26 @@
+# 使用Ubuntu最新版本作为基础镜像
+FROM ubuntu:latest
+
+# 安装必要的软件包
+RUN apt-get update && apt-get install -y openssh-server sudo
+
+# 添加一个名为ubuntu的用户，并给予其sudo权限
+RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1001 ubuntu
+
+# 为ubuntu用户设置密码（在这里设置你想要的密码）
+RUN echo 'ubuntu:your_password' | chpasswd
+
+# 设置SSH需要的目录
+RUN mkdir /var/run/sshd
+
+# 允许root用户通过SSH登录
+RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+
+# 如果需要，可以取消注释这一行，为ubuntu用户启用无密码sudo
+# RUN echo 'ubuntu ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/ubuntu
+
+# 暴露22端口
+EXPOSE 22
+
+# 启动SSH服务
+CMD ["/usr/sbin/sshd", "-D"]
