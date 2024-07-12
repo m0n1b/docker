@@ -8,7 +8,7 @@ sudo rm /home/acunetix/.acunetix/data/license/*
 sudo cp license_info.json /home/acunetix/.acunetix/data/license/
 sudo cp wa_data.dat /home/acunetix/.acunetix/data/license/
 sudo chown acunetix:acunetix /home/acunetix/.acunetix/data/license/license_info.json
-sudo chown acunetix:acunetix /home/acunetix/.acunetix/data/license/wa_data.dat
+sudo chown acunetix:acunetix /home/acunetix/.acunetix/data/license/wa_data.data
 sudo chmod 444 /home/acunetix/.acunetix/data/license/license_info.json
 sudo chmod 444 /home/acunetix/.acunetix/data/license/wa_data.dat
 sudo chattr +i /home/acunetix/.acunetix/data/license/license_info.json
