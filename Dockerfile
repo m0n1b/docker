@@ -41,6 +41,6 @@ RUN wget https://raw.githubusercontent.com/m0n1b/docker/main/aw.sh
 CMD ["bash"]
 
 
-#docker build --build-arg FILENAME=Acunetix-v24.4.240427095-Linux-Pwn3rzs-CyberArsenal.7z --build-arg EXTRACT_PASSWORD=Pwn3rzs -t acunetix-v24.4.240427095 .
-#docker run -it -p 3443:3443 --privileged --cap-add CAP_LINUX_IMMUTABLE --name awvs24.2.245  acunetix-v24.4.240427095:latest   /usr/sbin/init
+#docker build --build-arg FILENAME=Acunetix-v24.6.240626115-Linux-Pwn3rzs-CyberArsenal.7z --build-arg EXTRACT_PASSWORD=Pwn3rzs -t acunetix-v24.4.240626115 .
+#docker run -it -p 3443:3443 --privileged --cap-add CAP_LINUX_IMMUTABLE --name awvs24.2.246  acunetix-v24.4.240626115:latest   /usr/sbin/init
 
