@@ -1,3 +1,5 @@
+sudo chattr -i /home/acunetix/.acunetix/data/license/wa_data.dat
+sudo chattr -i /home/acunetix/.acunetix/data/license/license_info.json
 sudo systemctl stop acunetix
 sudo cp wvsc /home/acunetix/.acunetix/v_240626115/scanner/wvsc
 sudo chown acunetix:acunetix /home/acunetix/.acunetix/v_240226074/scanner/wvsc
