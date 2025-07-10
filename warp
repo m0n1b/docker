@@ -1,4 +1,4 @@
-apt install   lsb_release  -y 
+apt install   lsb-release  -y 
 apt install   gpg   -y 
 apt install   curl   -y 
 curl -fsSL https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
