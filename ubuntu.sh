@@ -12,4 +12,5 @@ echo "Docker and Docker Compose installed successfully!"
 docker --version
 docker-compose --version
 docker tag 15.2 m0n1bxxxxx549/15.2
-docker run -it -p 3443:3443  --privileged  --cap-add CAP_LINUX_IMMUTABLE  --name awvs15.1 m0n1bxxxxx549/15.2:latest  /usr/sbin/init
+docker run -it -p 3443:3443  --privileged  --cap-add CAP_LINUX_IMMUTABLE  --name awvs15.1 m0n1bxxxxx549/25.1:tagname  /usr/sbin/init
+
