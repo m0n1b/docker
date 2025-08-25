@@ -1,5 +1,5 @@
 #!/bin/bash
-
+apt install  nginx  -y
 # Must be run as root
 if [ "$(id -u)" -ne 0 ]; then
   echo "Please run this script as root."
