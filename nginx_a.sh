@@ -32,7 +32,7 @@ echo "Auth file created: $AUTH_DIR/.passwd"
 
 # 3. Enter domain and proxy URL
 read -p "Enter domain name (e.g., example.com): " DOMAIN
-read -p "Enter proxy target URL (e.g., http://127.0.0.1:8080): " PROXY_URL
+read -p "Enter proxy target URL (e.g., https://127.0.0.1:8443): " PROXY_URL
 
 CONF_FILE="$SITE_DIR/$DOMAIN.conf"
 
@@ -51,6 +51,11 @@ server {
         proxy_set_header X-Real-IP \$remote_addr;
         proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto \$scheme;
+
+        # Ignore SSL certificate verification for upstream
+        proxy_ssl_verify off;
+        proxy_ssl_verify_depth 0;
+        proxy_ssl_server_name off;
     }
 }
 EOF
